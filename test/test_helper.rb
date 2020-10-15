@@ -4,6 +4,11 @@ require 'rails/test_help'
 require 'minitest/reporters'
 Minitest::Reporters.use!
 
+require 'warning'
+Gem.path.each do |path|
+  Warning.ignore(//, path)
+end
+
 class ActiveSupport::TestCase
   include ApplicationHelper
   parallelize(workers: :number_of_processors)
