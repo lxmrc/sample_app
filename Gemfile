@@ -1,6 +1,11 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+require 'warning'
+Gem.path.each do |path|
+  Warning.ignore(//, path)
+end
+
 gem 'rails',                      '6.0.3.3'
 gem 'bcrypt',                     '3.1.13'
 gem 'bootstrap-sass',             '3.4.1'
@@ -15,6 +20,7 @@ group :development, :test do
   gem 'sqlite3', '1.4.2'
   gem 'byebug',  '11.1.3', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry-byebug', '~> 3.9'
+  gem 'warning', '~> 1.1'
 end
 
 group :development do
