@@ -4,11 +4,6 @@ module SessionsHelper
     session[:session_token] = user.session_token
   end
 
-  def log_out
-    reset_session
-    @current_user = nil
-  end
-
   def current_user
     if (user_id = session[:user_id])
       user = User.find_by(id: user_id)
