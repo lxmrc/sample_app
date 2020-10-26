@@ -215,7 +215,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.4.2)
     thor (1.0.1)
     thread_safe (0.3.6)
     tilt (2.0.10)
@@ -272,13 +271,15 @@ DEPENDENCIES
   selenium-webdriver (= 3.142.7)
   spring (= 2.1.0)
   spring-watcher-listen (= 2.0.1)
-  sqlite3 (= 1.4.2)
   turbolinks (= 5.2.1)
   warning (~> 1.1)
   web-console (= 4.0.2)
   webdrivers (= 4.3.0)
   webpacker (= 4.2.2)
   will_paginate (= 3.1.8)
+
+RUBY VERSION
+   ruby 2.6.6p146
 
 BUNDLED WITH
    2.1.4
