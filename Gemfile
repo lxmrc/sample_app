@@ -16,6 +16,7 @@ gem 'bootsnap',                   '1.4.6', require: false
 
 group :development, :test do
   gem 'sqlite3', '1.4.2'
+  gem 'pg',      '1.2.3'
   gem 'byebug',  '11.1.3', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry-byebug', '~> 3.9'
   gem 'warning', '~> 1.1'
