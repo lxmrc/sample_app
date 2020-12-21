@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
   resources :users
   get '/activate/:id/edit', to: 'account_activations#edit', as: 'activation'
+  resources :microposts, only: [:create, :destroy]
 end

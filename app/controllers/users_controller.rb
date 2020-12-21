@@ -52,14 +52,7 @@ class UsersController < ApplicationController
 
     def set_user
       @user = User.find(params[:id])
-    end
-
-    def logged_in_user
-      unless logged_in?
-        store_location
-        flash[:danger] = "You must be logged in to do that."
-        redirect_to login_url
-      end
+      @microposts = @user.microposts.paginate(page: params[:page])
     end
 
     def correct_user

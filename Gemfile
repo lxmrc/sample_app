@@ -3,6 +3,9 @@ ruby "2.6.6"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'rails',                      '6.0.3.3'
+gem 'image_processing',           '1.9.3'
+gem 'mini_magick',                '4.9.5'
+gem 'active_storage_validations', '0.8.9'
 gem 'pg',                         '1.2.3'
 gem 'bcrypt',                     '3.1.13'
 gem 'bootstrap-sass',             '3.4.1'
@@ -27,6 +30,7 @@ group :development do
   gem 'listen',                '3.2.1'
   gem 'spring',                '2.1.0'
   gem 'spring-watcher-listen', '2.0.1'
+  gem 'aws-sdk-s3',            '1.46.0', require: false
 end
 
 group :test do
